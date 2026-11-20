@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilford County High School</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+      background: #fff;
+      color: #3b1823;
+    }
+
+    header {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 16px clamp(20px, 6vw, 88px);
+      background: #800020;
+    }
+
+    .school-name {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-button {
+      min-height: 46px;
+      padding: 0 15px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+      font: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .nav-button:hover,
+    .nav-item:focus-within .nav-button {
+      background: #5c0017;
+    }
+
+    .dropdown {
+      position: absolute;
+      z-index: 5;
+      top: 100%;
+      left: 0;
+      min-width: 210px;
+      display: none;
+      padding-top: 10px;
+    }
+
+    .dropdown-content {
+      padding: 8px;
+      border: 1px solid #ead8de;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 12px 28px rgba(92, 0, 23, 0.18);
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 11px 13px;
+      border-radius: 6px;
+      color: #3b1823;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .dropdown a:hover,
+    .dropdown a:focus-visible {
+      outline: none;
+      background: #f8e9ed;
+      color: #800020;
+    }
+
+    .nav-item:hover .dropdown,
+    .nav-item:focus-within .dropdown {
+      display: block;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 72px 24px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      color: #800020;
+      font-size: clamp(34px, 5vw, 52px);
+    }
+
+    main p {
+      margin: 0;
+      color: #70545d;
+      font-size: 18px;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px;
+      }
+
+      .nav-button {
+        width: 100%;
+        padding: 0 8px;
+        font-size: 15px;
+      }
+
+      .dropdown {
+        min-width: 185px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="school-name" href="#home">Ilford County High School</a>
+    <nav aria-label="Main navigation">
+      <div class="nav-item">
+        <button class="nav-button" type="button">Home</button>
+        <div class="dropdown">
+          <div class="dropdown-content">
+            <a href="#welcome">Welcome</a>
+            <a href="#latest-news">Latest news</a>
+            <a href="#about-us">About ICHS</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-button" type="button">Curriculum</button>
+        <div class="dropdown">
+          <div class="dropdown-content">
+            <a href="#Facilities">Facilities</a>
+            <a href="#Subject Info">Subject Info</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-button" type="button">Student Info</button>
+        <div class="dropdown">
+          <div class="dropdown-content">
+            <a href="#Houses">Houses</a>
+            <a href="#Uniform">Uniform</a>
+            <a href="#Mental Health">Mental Health</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-button" type="button">Parent Info</button>
+        <div class="dropdown">
+          <div class="dropdown-content">
+            <a href="#attendance">Attendance</a>
+            <a href="#term-dates">Term dates</a>
+            <a href="#School Day">School Day</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-button" type="button">Extracurricular</button>
+        <div class="dropdown">
+          <div class="dropdown-content">
+            <a href="#clubs">Clubs and activities</a>
+            <a href="#Competitions">Competitions</a>
+            <a href="#trips">Trips and events</a>
+            <a href="#sports-teams">Sports Teams</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <h1>Welcome to Ilford County High School</h1>
+    <img src="Ilford_County_High_School_(logo).png" alt="ICHS LOGO">
+  </main>
+</body>
+</html>
